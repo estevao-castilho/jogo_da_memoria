@@ -1,0 +1,96 @@
+/* Corpo geral */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Título e pontuação */
+h1, h2 {
+    font-size: 22px;
+    color: orange;
+    margin: 10px 0;
+}
+
+/* Tabuleiro */
+.tabuleiro {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    gap: 5px; /* Espaçamento entre as cartas */
+    width: 100%; /* O tabuleiro vai ocupar toda a largura possível */
+    max-width: 330px; /* Definimos um limite para o tamanho */
+}
+
+/* Cartas */
+.tabuleiro img {
+    width: 75px;
+    height: 150px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 6px;
+    background-color: white;
+}
+
+/* Efeito hover */
+.tabuleiro img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Nível fácil: 3 colunas, 4 linhas */
+.tabuleiro.nivel-facil {
+    max-width: 330px;
+}
+
+/* Nível difícil: mais cartas, mas ainda organizadas em 4 linhas */
+.tabuleiro.nivel-dificil {
+    max-width: 400px; /* Ajustamos a largura para caber mais cartas */
+}
+
+.tabuleiro.nivel-dificil img {
+    width: 60px; /* Diminuímos a largura das cartas no modo difícil */
+    height: 120px; /* Diminuímos a altura das cartas no modo difícil */
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 500px) {
+    .tabuleiro {
+        width: 90vw; /* O tabuleiro ocupa 90% da largura da tela em dispositivos pequenos */
+    }
+    .tabuleiro img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Ranking */
+#ranking {
+    margin-top: 20px; /* Espaçamento extra para o ranking */
+    color: white;
+    font-size: 18px;
+}
+#btn-jogar-novamente {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: orange;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#btn-jogar-novamente:hover {
+    background-color: darkorange;
+}
